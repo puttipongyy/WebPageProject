@@ -28,7 +28,7 @@
   <section class="cards">
     <!-- Abstract -->
     <div class="card-item">
-      <img src="./images/AjYa2.jpg" alt="Advisor Icon" />
+      <img src="./images/AjYa2.jpg" alt="Advisor Icon" class="circular-img"/>
       <h3>Advisor</h3>
       <p>
         ดร.พิชญา วิรัชโชติเสถียร <br>
@@ -38,22 +38,59 @@
 
     <!-- การประชุมวิชาการ -->
     <div class="card-item">
-      <img src="./images/miku bakamitai.jpg" alt="Conference Icon" />
-      <h3>การประชุมวิชาการ</h3>
+      <img src="./images/tonry_profile.jpg" alt="student1 Icon" />
+      <h3>Student</h3>
       <p>
-        อธิบายเนื้อหาหรือรายละเอียดเกี่ยวกับการประชุมวิชาการที่เกี่ยวข้อง
+        ธนบดี ภูชมศรี <br> 
+        Thanabodee Phuchomsri
       </p>
     </div>
 
     <!-- Flow-chart -->
     <div class="card-item">
-      <img src="./images/miku bakamitai.jpg" alt="Flowchart Icon" />
-      <h3>Flow-chart</h3>
+      <img src="./images/om_profile.jpg" alt="student/ Icon" />
+      <h3>student</h3>
       <p>
-        แสดงหรือสรุปกระบวนการทำงานของงานวิจัยด้วย Flow-chart 
+        พุทธิพงศ์ ยางนอก <br>
+        Puttipong Yangnork
       </p>
     </div>
   </section>
+
+  <section class="example-results">
+    <h2>WebApp Demo</h2>
+  </section>
+
+  <!-- <a href="20.205.16.95" class="link-card"> -->
+  <a href="http://127.0.0.1:5000/" class="link-card">
+    <img src="./images/miku bakamitai.jpg" alt="Example Image">
+    <div class="card-content">
+      <h3>PREDICTS
+        SHOCK RISK IN
+        ICU PATIENTS WebApp</h3>
+      <!-- <p>นี่คือคำอธิบายสั้น ๆ ของเนื้อหาที่อยู่ใน card นี้</p> -->
+    </div>
+  </a>
+
+  <script>
+    // ค้นหา element ทั้งหมดที่มี class "link-card"
+    const cards = document.querySelectorAll('.link-card');
+    cards.forEach(card => {
+      // เมื่อ mouse เข้ามาใน card
+      card.addEventListener('mouseenter', function() {
+          // สุ่มเลือกทิศทาง: ถ้า Math.random() >= 0.5 ให้เคลื่อนที่ไปขวา มิฉะนั้นไปซ้าย
+          if (Math.random() >= 0.5) {
+              card.classList.add('move-right');
+          } else {
+              card.classList.add('move-left');
+          }
+      });
+      // เมื่อ mouse ออกจาก card ให้ลบคลาสที่เพิ่มไว้
+      card.addEventListener('mouseleave', function() {
+          card.classList.remove('move-right', 'move-left');
+      });
+    });
+  </script>
 
   <!-- ส่วน Abstract -->
   <section class="abstract-section">
@@ -72,36 +109,12 @@
     </p>
   </section>
 
-  <!-- ส่วนลิงก์/หัวข้อต่าง ๆ -->
-  <section class="links">
-    <!-- Abstract -->
-    <div class="link-item">
-      <img src="./images/AjYa2.jpg" alt="Advisor Icon" />
-      <h3>Advisor</h3>
-      <p>
-        ดร.พิชญา วิรัชโชติเสถียร 
-      </p>
+  <div class="image-card">
+    <div class="card-content">
+      <h3>Model structure</h3>
     </div>
-
-    <!-- การประชุมวิชาการ -->
-    <div class="link-item">
-      <img src="./images/miku bakamitai.jpg" alt="Conference Icon" />
-      <h3>การประชุมวิชาการ</h3>
-      <p>
-        อธิบายเนื้อหาหรือรายละเอียดเกี่ยวกับการประชุมวิชาการที่เกี่ยวข้อง
-      </p>
-    </div>
-
-    <!-- Flow-chart -->
-    <div class="card-item">
-      <img src="./images/miku bakamitai.jpg" alt="Flowchart Icon" />
-      <h3>Flow-chart</h3>
-      <p>
-        แสดงหรือสรุปกระบวนการทำงานของงานวิจัยด้วย Flow-chart 
-      </p>
-    </div>
-  </section>
-
+    <img src="./images/model_infog.png" alt="ตัวอย่างรูปภาพ">
+  </div>
 
 
   <!-- ส่วนท้ายของเว็บไซต์ -->
