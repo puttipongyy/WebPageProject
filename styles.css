@@ -50,6 +50,7 @@
     margin: 40px auto;
     flex-wrap: wrap;
     max-width: 800px;
+    cursor: pointer;
   }
   
   .card-item {
@@ -253,19 +254,19 @@
 }
 
 /* คลาสสำหรับเคลื่อนที่ไปทางซ้าย */
-.move-left {
+/* .move-left {
   transform: translateX(-500px);
-}
+} */
 
 /* คลาสสำหรับเคลื่อนที่ไปทางขวา */
-.move-right {
+/* .move-right {
   transform: translateX(500px);
-}
+} */
 
-/* .link-card:hover {
-  /*transform: translateY(-50px); /* เลื่อน card ขึ้นเล็กน้อยเมื่อ hover */
-  /* transform: translateX(-500px);
-} */ 
+.link-card:hover {
+  transform: translateY(-15px); /* เลื่อน card ขึ้นเล็กน้อยเมื่อ hover */
+  /* /* transform: translateX(-500px); */
+} 
 
 /* รูปภาพภายใน card */
 .link-card img {
