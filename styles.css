@@ -50,7 +50,9 @@
     margin: 40px auto;
     flex-wrap: wrap;
     max-width: 800px;
+    /* cursor: pointer; */
     cursor: pointer;
+    
   }
   
   .card-item {
